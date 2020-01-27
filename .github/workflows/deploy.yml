@@ -17,8 +17,8 @@ jobs:
     - uses: actions/checkout@v1
     - shell: bash
       run: |
-        npm install
-        npm run build
+        npm install --quiet
+        npm run --quiet build
         cp src/routes.json dist/testapp/
     - uses: joslinmicrosoft/staticsitesaction@joslin
       with:
