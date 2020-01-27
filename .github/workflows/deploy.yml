@@ -19,9 +19,9 @@ jobs:
       run: |
         npm install
         npm run build
-    - uses: joslinmicrosoft/staticsitesaction@master
+    - uses: joslinmicrosoft/staticsitesaction@joslin
       with:
-        azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN }}
+        azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN_JOSLIN }}
         action: 'upload'         
         app_artifact_location: 'dist/testapp'
         api_artifact_location: ''
@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Azure Pages Close Pull Request Job
     steps:
-    - uses: joslinmicrosoft/staticsitesaction@master
+    - uses: joslinmicrosoft/staticsitesaction@joslin
       with:
-        azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN }}
+        azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN_JOSLIN }}
         action: 'close'
