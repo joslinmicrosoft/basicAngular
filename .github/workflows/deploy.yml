@@ -2,11 +2,11 @@ name: Azure Pages CI
 on:
   push:
     branches:
-    - master
+    - joslin
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
-    - master
+    - joslin
 
 jobs:
   azure_pages_build_and_upload_job:
