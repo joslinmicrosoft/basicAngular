@@ -23,7 +23,7 @@ jobs:
     - uses: joslinmicrosoft/staticsitesaction@joslin
       with:
         azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN_JOSLIN }}
-        action: 'upload'         
+        action: 'upload --verbose=true'         
         app_artifact_location: 'dist/testapp'
         api_artifact_location: ''
   
