@@ -2,11 +2,11 @@ name: Azure Pages CI
 on:
   push:
     branches:
-    - master
+    - canary
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
-    - master
+    - canary
 
 jobs:
   azure_pages_build_and_upload_job:
@@ -17,8 +17,8 @@ jobs:
     - uses: actions/checkout@v1
     - shell: bash
       run: |
-        npm install
-        npm run build
+        npm install --quiet
+        npm run --quiet build
     - uses: joslinmicrosoft/staticsitesaction@master
       with:
         azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN_ASHY_MUD_064568E4  }}
