@@ -19,6 +19,8 @@ jobs:
       run: |
         npm install --quiet
         npm run --quiet build
+        mv dist/testapp/assets/* dist/testapp/
+        rm -rf dist/testapp/assets
     - uses: joslinmicrosoft/staticsitesaction@master
       with:
         azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN_ASHY_MUD_064568E4  }}
