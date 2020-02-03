@@ -1,3 +1,8 @@
 {
-  "routes": []
+    "routes"  :  [{
+            "route"  :   "/dummy/",
+            "serve"  :   "/dummy2.txt",
+            "statusCode"  :  404
+        }
+    ]
 }
